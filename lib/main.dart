@@ -1,108 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
+import 'package:fomagran/pages/home/home.dart';
+import 'package:fomagran/utils/constants.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  String phoneNumber = "+82 10 2240 6112";
-
-  void changePhoneNumber() {
-    setState(() {
-      phoneNumber = "+82 10 1234 5678";
-    });
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Colors.teal,
-      body: SafeArea(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          CircleAvatar(
-            radius: 50.0,
-            backgroundImage: AssetImage('images/profile.png'),
-          ),
-          Text(
-            "Fomagran",
-            style: TextStyle(
-                fontFamily: "Timmana",
-                fontSize: 40,
-                color: Colors.white,
-                fontWeight: FontWeight.bold),
-          ),
-          Text("iOS & Flutter Developer",
-              style: TextStyle(
-                fontFamily: "Timmana",
-                fontSize: 20,
-                color: Colors.teal.shade100,
-              )),
-          SizedBox(
-            width: 150,
-            height: 20.0,
-            child: Divider(
-              color: Colors.teal.shade100,
-            ),
-          ),
-          Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
-              child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    "$phoneNumber",
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontFamily: "Timmana",
-                        fontSize: 20),
-                  ))),
-          Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
-              child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    "fomagran6@naver.com",
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontFamily: "Timmana",
-                        fontSize: 20),
-                  ))),
-          FlatButton(
-            onPressed: () {
-              changePhoneNumber();
-              print("$phoneNumber");
-            },
-            child: Card(
-                color: Colors.black,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 200),
-                child: ListTile(
-                    title: Center(
-                  child: Text(
-                    "Show more detail!",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "Timmana",
-                        fontSize: 20),
-                  ),
-                ))),
-          )
+      title: "Flutter Portfolio",
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
+      darkTheme: Theme.of(context).copyWith(
+        platform: TargetPlatform.android,
+        scaffoldBackgroundColor: kBackgroundColor,
+        primaryColor: kPrimaryColor,
+        canvasColor: kBackgroundColor,
+        textTheme: GoogleFonts.latoTextTheme(),
+      ),
+      builder: (context, widget) => ResponsiveWrapper.builder(
+        ClampingScrollWrapper.builder(context, widget),
+        defaultScale: true,
+        breakpoints: [
+          ResponsiveBreakpoint.resize(450, name: MOBILE),
+          ResponsiveBreakpoint.resize(800, name: TABLET),
+          ResponsiveBreakpoint.resize(1000, name: TABLET),
+          ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+          ResponsiveBreakpoint.resize(2460, name: "4K"),
         ],
-      )),
-    ));
+        background: Container(
+          color: kBackgroundColor,
+        ),
+      ),
+      home: Home(),
+    );
   }
 }
