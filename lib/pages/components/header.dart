@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:fomagran/models/header_item.dart';
 import 'package:fomagran/utils/constants.dart';
+import 'package:fomagran/utils/screen_helper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -102,11 +104,45 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [HeaderLogo(), HeaderRow()],
+      child: ScreenHelper(
+        desktop: Padding(
+          padding: EdgeInsets.symmetric(vertical: 6.0),
+          child: buildHelper(),
+        ),
+        mobile: buildMobileHeader(),
+        tablet: buildHelper(),
       ),
     );
   }
+}
+
+Widget buildMobileHeader() {
+  return SafeArea(
+      child: Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        HeaderLogo(),
+        GestureDetector(
+          onTap: () {},
+          child: Icon(
+            FlutterIcons.menu_fea,
+            color: Colors.white,
+            size: 28.0,
+          ),
+        )
+      ],
+    ),
+  ));
+}
+
+Widget buildHelper() {
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 16.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [HeaderLogo(), HeaderRow()],
+    ),
+  );
 }
