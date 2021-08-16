@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fomagran/pages/components/header.dart';
 import 'package:fomagran/utils/constants.dart';
 import 'package:fomagran/utils/globals.dart';
+import 'package:fomagran/pages/components/carousel.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -59,7 +60,8 @@ class Home extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               child: Header(),
-            )
+            ),
+            Carousel()
           ]),
         ),
       ),
