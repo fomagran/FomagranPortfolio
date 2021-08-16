@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:fomagran/models/header_item.dart';
 import 'package:fomagran/utils/constants.dart';
+import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/utils/screen_helper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -125,7 +126,9 @@ Widget buildMobileHeader() {
       children: [
         HeaderLogo(),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Globals.scaffoldKey.currentState.openEndDrawer();
+          },
           child: Icon(
             FlutterIcons.menu_fea,
             color: Colors.white,
