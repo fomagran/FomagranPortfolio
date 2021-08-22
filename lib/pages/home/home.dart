@@ -3,6 +3,7 @@ import 'package:fomagran/pages/components/header.dart';
 import 'package:fomagran/utils/constants.dart';
 import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/pages/components/carousel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'components/cv_section.dart';
 import 'components/ios_app_ad.dart';
@@ -68,6 +69,18 @@ class Home extends StatelessWidget {
             Carousel(),
             SizedBox(height: 20.0),
             CvSection(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 200),
+              child: Text(
+                "Launch Apps",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 45.0,
+                  height: 1.8,
+                ),
+              ),
+            ),
             IosAppAd(),
             SizedBox(height: 70.0),
             WebsiteAd(),

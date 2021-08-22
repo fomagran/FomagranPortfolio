@@ -63,7 +63,7 @@ List<CarouselItemModel> carouselItems = List.generate(
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
-                      "Do you wannna talk to me?",
+                      "Do you wanna know more about me?",
                       style: TextStyle(
                         height: 1.5,
                         color: Colors.white,
@@ -92,7 +92,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               child: TextButton(
                 onPressed: () {},
                 child: Text(
-                  "CLICK HERE",
+                  "MORE DETAIL",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 13.0,

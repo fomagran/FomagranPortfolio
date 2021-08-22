@@ -8,13 +8,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 List<HeaderItem> headerItems = [
-  HeaderItem(title: "Home", onTap: () {}),
-  HeaderItem(title: "My Intro", onTap: () {}),
-  HeaderItem(title: "Services", onTap: () {}),
-  HeaderItem(title: "Portfolio", onTap: () {}),
-  HeaderItem(title: "Testimonials", onTap: () {}),
-  HeaderItem(title: "Blogs", onTap: () {}),
-  HeaderItem(title: "Hire me", onTap: () {}, isButton: true)
+  // HeaderItem(title: "Home", onTap: () {}),
+  // // HeaderItem(title: "My Intro", onTap: () {}),
+  // // HeaderItem(title: "Services", onTap: () {}),
+  // // HeaderItem(title: "Portfolio", onTap: () {}),
+  // // HeaderItem(title: "Testimonials", onTap: () {}),
+  // // HeaderItem(title: "Blogs", onTap: () {}),
+  HeaderItem(title: "HIRE ME", onTap: () {}, isButton: true)
 ];
 
 class HeaderLogo extends StatelessWidget {

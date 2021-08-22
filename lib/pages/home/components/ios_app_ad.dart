@@ -34,7 +34,7 @@ class IosAppAd extends StatelessWidget {
                     Expanded(
                       flex: constraints.maxWidth > 720.0 ? 1 : 0,
                       child: Image.asset(
-                        "images/person.png",
+                        "images/MoALaunch.png",
                         width: constraints.maxWidth > 720 ? null : 350.0,
                       ),
                     ),
@@ -56,7 +56,7 @@ class IosAppAd extends StatelessWidget {
                               height: 15.0,
                             ),
                             Text(
-                              "UNIVERSAL \nSMART HOME APP",
+                              "모두의 아파트",
                               style: GoogleFonts.oswald(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w900,
@@ -68,7 +68,7 @@ class IosAppAd extends StatelessWidget {
                               height: 10.0,
                             ),
                             Text(
-                              "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that.",
+                              "모두의 아파트는 이웃과 함께 따듯한 아파트 문화를 만들어 나아가는 아파트 기반 라이프스타일 플랫폼입니다.",
                               style: TextStyle(
                                 color: kCaptionColor,
                                 height: 1.5,
@@ -106,34 +106,6 @@ class IosAppAd extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                MouseRegion(
-                                  cursor: SystemMouseCursors.click,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                        border:
-                                            Border.all(color: kPrimaryColor)),
-                                    height: 48.0,
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 28.0),
-                                    child: TextButton(
-                                      onPressed: () {},
-                                      child: Center(
-                                        child: Text(
-                                          "NEXT APP",
-                                          style: TextStyle(
-                                              color: kPrimaryColor,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                )
                               ],
                             )
                           ],

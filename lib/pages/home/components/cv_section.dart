@@ -7,21 +7,23 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 final List<DesignProcess> designProcess = [
   DesignProcess(
-      title: "DESIGN",
-      imagePath: "images/person.png",
-      subtitle: "A full stack allround design"),
+      title: "Creative",
+      imagePath: "images/develop.png",
+      subtitle: "Beutiful animation \nArtistic library"),
   DesignProcess(
-      title: "DESIGN",
-      imagePath: "images/person.png",
-      subtitle: "A full stack allround design"),
+      title: "Passionate",
+      imagePath: "images/design.png",
+      subtitle: "Never stop 1.1K commits \nOver 400 posts"),
   DesignProcess(
-      title: "DESIGN",
-      imagePath: "images/person.png",
-      subtitle: "A full stack allround design"),
+      title: "Professional",
+      imagePath: "images/write.png",
+      subtitle:
+          "Launch 5 projects in App Store, \nHave been running iOS apps for about 2 years"),
   DesignProcess(
-      title: "DESIGN",
-      imagePath: "images/person.png",
-      subtitle: "A full stack allround design"),
+      title: "Cooperative",
+      imagePath: "images/promote.png",
+      subtitle:
+          "Have been cooperating \nwith CEO,Desinger\nAndroid,Front-end,Back-end Engineer"),
 ];
 
 class CvSection extends StatelessWidget {
@@ -47,20 +49,12 @@ class CvSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "BETTER THAN DESIGN,\nBETTER EXPERIENCES",
-                  style: GoogleFonts.oswald(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    height: 1.8,
-                  ),
-                ),
                 GestureDetector(
                   onTap: () {},
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
-                      "DOWNLOAD CV",
+                      "",
                       style: GoogleFonts.oswald(
                         color: kPrimaryColor,
                         fontWeight: FontWeight.w900,
