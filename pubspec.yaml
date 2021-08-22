@@ -54,6 +54,7 @@ flutter:
   assets:
     - images/profile.png
     - images/person.png
+    - images/Beenzino.jpg
     
   fonts:
     - family: Timmana

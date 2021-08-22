@@ -4,6 +4,8 @@ import 'package:fomagran/utils/constants.dart';
 import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/pages/components/carousel.dart';
 
+import 'components/cv_section.dart';
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,7 +63,9 @@ class Home extends StatelessWidget {
             Container(
               child: Header(),
             ),
-            Carousel()
+            Carousel(),
+            SizedBox(height: 20.0),
+            CvSection(),
           ]),
         ),
       ),

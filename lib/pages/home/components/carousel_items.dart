@@ -63,7 +63,7 @@ List<CarouselItemModel> carouselItems = List.generate(
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
-                      "Do you want talk to me?",
+                      "Do you wannna talk to me?",
                       style: TextStyle(
                         height: 1.5,
                         color: Colors.white,
@@ -107,7 +107,7 @@ List<CarouselItemModel> carouselItems = List.generate(
     ),
     image: Container(
       child: Image.asset(
-        "images/person.png",
+        "images/Beenzino.jpg",
         fit: BoxFit.contain,
       ),
     ),
