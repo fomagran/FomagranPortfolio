@@ -6,6 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class IosAppAd extends StatelessWidget {
+  String title;
+  String detail;
+  String image;
+
+  IosAppAd({@required this.title, @required this.detail, @required this.image});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,7 +40,7 @@ class IosAppAd extends StatelessWidget {
                     Expanded(
                       flex: constraints.maxWidth > 720.0 ? 1 : 0,
                       child: Image.asset(
-                        "images/MoALaunch.png",
+                        "$image",
                         width: constraints.maxWidth > 720 ? null : 350.0,
                       ),
                     ),
@@ -56,7 +62,7 @@ class IosAppAd extends StatelessWidget {
                               height: 15.0,
                             ),
                             Text(
-                              "모두의 아파트",
+                              "$title",
                               style: GoogleFonts.oswald(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w900,
@@ -68,7 +74,7 @@ class IosAppAd extends StatelessWidget {
                               height: 10.0,
                             ),
                             Text(
-                              "모두의 아파트는 이웃과 함께 따듯한 아파트 문화를 만들어 나아가는 아파트 기반 라이프스타일 플랫폼입니다.",
+                              "$detail",
                               style: TextStyle(
                                 color: kCaptionColor,
                                 height: 1.5,
