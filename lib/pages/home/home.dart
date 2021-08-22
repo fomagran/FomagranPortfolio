@@ -5,6 +5,7 @@ import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/pages/components/carousel.dart';
 
 import 'components/cv_section.dart';
+import 'components/ios_app_ad.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -66,6 +67,7 @@ class Home extends StatelessWidget {
             Carousel(),
             SizedBox(height: 20.0),
             CvSection(),
+            IosAppAd(),
           ]),
         ),
       ),
