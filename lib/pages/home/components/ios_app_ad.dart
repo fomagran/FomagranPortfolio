@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fomagran/pages/home/ios_detail.dart';
 import 'package:fomagran/utils/constants.dart';
 import 'package:fomagran/utils/screen_helper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:fomagran/pages/home/ios_detail.dart';
 
 class IosAppAd extends StatelessWidget {
   String title;
@@ -98,7 +100,12 @@ class IosAppAd extends StatelessWidget {
                                       horizontal: 28.0,
                                     ),
                                     child: TextButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (_) => IosDetail()));
+                                      },
                                       child: Center(
                                         child: Text(
                                           "EXPLORE MORE",

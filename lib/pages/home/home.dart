@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/pages/components/header.dart';
 import 'package:fomagran/utils/constants.dart';
-import 'package:fomagran/utils/globals.dart';
 import 'package:fomagran/pages/components/carousel.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import 'components/cv_section.dart';
 import 'components/ios_app_ad.dart';
 import 'components/wesite_ad.dart';

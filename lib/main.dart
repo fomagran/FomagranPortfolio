@@ -4,9 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:fomagran/pages/home/home.dart';
 import 'package:fomagran/utils/constants.dart';
+import 'package:fomagran/pages/home/ios_detail.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(IosDetail());
 }
 
 class MyApp extends StatelessWidget {

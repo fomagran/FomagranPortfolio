@@ -1,11 +1,11 @@
 {
-    "name": "fomagran",
-    "short_name": "fomagran",
+    "name": "Fomagran's portfolio",
+    "short_name": "Fomagran",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Fomagran's portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
